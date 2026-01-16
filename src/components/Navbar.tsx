@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import ThemeSwitcher from "./theme/ThemeSwitcher"
 
 const navItems = [
   { name: "Work", href: "/work" },
@@ -36,23 +37,10 @@ export default function Navbar() {
             TRIONN
           </Link>
 
-          {/* Desktop Nav */}
-          {/* <nav className="hidden md:flex gap-10">
-            {navItems.map((item) => (
-              <motion.div
-                key={item.name}
-                whileHover={{ y: -2 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Link
-                  href={item.href}
-                  className="text-sm uppercase tracking-wider text-white/90"
-                >
-                  {item.name}
-                </Link>
-              </motion.div>
-            ))}
-          </nav> */}
+<div className="flex">
+<ThemeSwitcher/>
+</div>
+       
 
           {/* Mobile Menu Button */}
           <button
