@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400&display=swap');
-
 @import "tailwindcss";
+@plugin 'lightswind/plugin'; 
+
 
 
 @font-face {
@@ -34,4 +35,16 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* globals.css */
+[data-cursor-target] {
+  --cursor-curl: 0;
+  --cursor-splat-force: 0;
+  --cursor-density-dissipation: 1;
+  --cursor-pressure: 0;
+}
+
+[data-cursor-hover="true"] {
+  --cursor-splat-force: 0.15 !important;
 }
