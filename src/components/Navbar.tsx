@@ -32,14 +32,11 @@ export default function Navbar() {
   className={`
     fixed top-0 left-0 w-full z-50
     transition-all duration-300
-    ${
-      scrolled
-        ? "backdrop-blur-md bg-white/70 dark:bg-black/60 border-b border-black/5 dark:border-white/10"
-        : "bg-transparent"
-    }
+    bg-transparent
+  
   `}
 >
-  <div className="max-w-7xl mx-auto px-6 h-20 grid grid-cols-3 items-center">
+  <div className="max-w-7xl mx-auto px-6 lg:px-12 h-20 grid grid-cols-3 items-center">
     
     {/* LEFT – LOGO */}
     <Link
@@ -86,10 +83,11 @@ export default function Navbar() {
         `}
       >
         {/* Top Bar */}
-        <div className="flex items-center justify-between p-6">
+        <div className="flex items-center justify-between p-6 px-6 lg:px-12">
           <span className="text-lg font-semibold text-black dark:text-white">
             TRIONN
           </span>
+           <ThemeSwitcher />
           <button
             onClick={() => setOpen(false)}
             className="p-2 rounded-full
@@ -107,7 +105,7 @@ export default function Navbar() {
               key={item.name}
               initial={{ y: 40, opacity: 0 }}
               animate={open ? { y: 0, opacity: 1 } : {}}
-              transition={{ delay: i * 0.1, ease: "easeOut" }}
+              transition={{ delay: i * 0.2, ease: "easeOut" }}
             >
               <Link
                 href={item.href}
