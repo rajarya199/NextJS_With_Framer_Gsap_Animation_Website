@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, easeOut } from "framer-motion";
+import VideoAnimation from "./VideoAnimation";
 const item = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -11,7 +12,8 @@ const item = {
 };
 export default function Hero() {
   return (
-    <section className="relative pt-24 min-h-[calc(100vh-6rem)] px-6 lg:px-12 ">
+    <>
+  <section className="relative pt-24 pb-4  px-6 lg:px-12 bg-white dark:bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 w-full justify-center items-center flex">
         <motion.div
           initial="hidden"
@@ -69,20 +71,32 @@ export default function Hero() {
   }}
 >
   <p className="text-center">
-   <span>
-    We roar with success, delivering the TRIONN<sup>®</sup>
-  </span> <br />
-  <span>through versatile design, branding and the latest</span> <br/>
-  <span>tech development to companies.</span>    <br/>
+              <span>WE ROAR WITH SUCCESS, DELIVERING THE TRIONN<sup>®</sup></span> <br/>
+            <span>THROUGH VERSATILE DESIGN, BRANDING AND THE LATEST</span><br/>
+            <span>TECH DEVELOPMENT TO COMPANIES..</span>
+
   </p>
+          {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="absolute left-1/2 -translate-x-1/2 mt-4
+                   text-xs tracking-widest
+                   text-black/50 dark:text-white/50"
+      >
+        SCROLL
+      </motion.div>
 </motion.p>
 
         
         </motion.div>
       </div>
+
  {/* CTA */}
           <motion.div variants={item} className="mt-12 ">
-            <button
+            
+            <button 
               className="
                 px-8 py-4 rounded-full
                 border border-black/20 dark:border-white/20
@@ -90,23 +104,28 @@ export default function Hero() {
                 hover:bg-black hover:text-white
                 dark:hover:bg-white dark:hover:text-black
                 transition-all duration-300
+
               "
+
             >
               View Our Work
             </button>
           </motion.div>
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2
-                   text-xs tracking-widest
-                   text-black/50 dark:text-white/50"
-      >
-        SCROLL
-      </motion.div>
+
+          
+  
+
+             {/* VIDEO BLOCK */}
+      <div className="mt-32 " >
+        <VideoAnimation src="/intro-video.mp4" className="max-w-5xl mx-auto" />
+      </div>
+
+       
+
     </section>
+    
+    </>
+  
   );
 }
 
