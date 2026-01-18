@@ -99,19 +99,20 @@ export default function Navbar() {
         </div>
 
         {/* Nav Links */}
-        <nav className="flex flex-col items-center justify-center h-full gap-8">
+        <nav className="flex flex-col  justify-end font-syne text-base p-6 px-6 lg:px-12 space-y-2 ">
           {navItems.map((item, i) => (
             <motion.div
               key={item.name}
               initial={{ y: 40, opacity: 0 }}
               animate={open ? { y: 0, opacity: 1 } : {}}
-              transition={{ delay: i * 0.2, ease: "easeOut" }}
+              transition={{ delay: i * 0.3, ease: "easeOut" }}
             >
               <Link
                 href={item.href}
                 onClick={() => setOpen(false)}
                 className="
-                  text-3xl font-medium
+                -mb-1 pb-4
+                  text-8xl font-medium
                   text-black dark:text-white
                   hover:opacity-70 transition
                 "
