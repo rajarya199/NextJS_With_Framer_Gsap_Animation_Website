@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
-
+import SmokeyCursor from "@/components/lightswind/smokey-cursor";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,6 +24,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -33,8 +36,11 @@ export default function RootLayout({
   `}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SmokeyCursor className='' autoColors={false} colorUpdateSpeed={0}  
+/>
+    
      <div className="flex h-screen flex-col   bg-white text-black
-    dark:bg-black dark:text-white">
+    dark:bg-black dark:text-white data-cursor-target">
         <Navbar/>
       <main className="flex-1">{children}</main>
 
