@@ -36,35 +36,53 @@ export default function WorkDisplay() {
     const ctx = gsap.context(() => {
       // Right images
       gsap.utils.toArray<HTMLElement>(".work-image-right").forEach((el) => {
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: el,
-            scrub: true,
-            start: "0% bottom",
-            end: "40% center",
-          },
-        })
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: el,
+              scrub: true,
+              start: "0% bottom",
+              end: "40% center",
+            },
+          })
           .fromTo(
             el,
-            { rotation: -45, xPercent: -50, yPercent: -30, opacity: 0 },
-            { rotation: 0, xPercent: 0, yPercent: 0, opacity: 1, ease: "power2.out" }
+            { rotation: -15, xPercent: -50, yPercent: -30, 
+              opacity: 0,
+             transformOrigin: "center center"
+             },
+            {
+              rotation: 0,
+              xPercent: 0,
+              yPercent: 0,
+              opacity: 1,
+              ease: "power2.out",
+            },
           );
       });
 
       // Left images
       gsap.utils.toArray<HTMLElement>(".work-image-left").forEach((el) => {
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: el,
-            scrub: true,
-            start: "0% bottom",
-            end: "40% center",
-          },
-        })
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: el,
+              scrub: true,
+              start: "0% bottom",
+              end: "40% center",
+            },
+          })
           .fromTo(
             el,
-            { rotation: 45, xPercent: 50, yPercent: -30, opacity: 0 },
-            { rotation: 0, xPercent: 0, yPercent: 0, opacity: 1, ease: "power2.out" }
+            { rotation: 15, xPercent: 50, yPercent: -30,
+               opacity: 0, transformOrigin: "center center" },
+            {
+              rotation: 0,
+              xPercent: 0,
+              yPercent: 0,
+              opacity: 1,
+              ease: "power2.out",
+            },
           );
       });
 
