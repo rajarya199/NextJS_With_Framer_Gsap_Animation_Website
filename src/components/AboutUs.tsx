@@ -25,15 +25,15 @@ export default function AboutUs() {
       });
 
       // Paragraph split lines
-      const split = new SplitType(".waw-line", { types: "lines" });
+      const split = new SplitType(".waw-line", { types: "lines" ,tagName:"span"});
 
       gsap.from(split.lines, {
         y: 70,
         stagger: 0.06,
-        duration: 0.8,
+        duration: 0.7,
         scrollTrigger: {
           trigger: ".waw-p1",
-          start: "top bottom",
+          start: "top 20%",
           end: "center center",
           toggleActions: "play none reverse",
         },
@@ -60,7 +60,7 @@ export default function AboutUs() {
   return (
     <section
       ref={sectionRef}
-      className="px-6 lg:px-12 pt-40 pb-24 bg-white dark:bg-black transition-colors duration-500"
+      className="px-6 lg:px-12 bg-white dark:bg-black transition-colors duration-500 h-full"
     >
       <div className="max-w-7xl mx-auto flex flex-col gap-12 pb-4">
 
@@ -81,7 +81,7 @@ export default function AboutUs() {
         </h2>
 
         {/* PARAGRAPH 1 */}
-        <div className="waw-p1 text-5xl font-syne text-zinc-800 dark:text-zinc-200 leading-relaxed">
+        <div className="waw-p1  text-5xl font-syne text-zinc-800 dark:text-zinc-200 leading-relaxed">
           {[
             "As an award-winning agency",
             "within the digital jungle,",
