@@ -5,7 +5,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import ThemeSwitcher from "./theme/ThemeSwitcher"
-
+import SmokeyCursor from "./lightswind/smokey-cursor"
 const navItems = [
   { name: "Work", href: "/work" },
   { name: "Services", href: "/services" },
@@ -82,6 +82,7 @@ export default function Navbar() {
           ${open ? "pointer-events-auto" : "pointer-events-none"}
         `}
       >
+        <SmokeyCursor/>
         {/* Top Bar */}
         <div className="flex items-center justify-between p-6 px-6 lg:px-12">
           <span className="text-lg font-semibold text-black dark:text-white">
