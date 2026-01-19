@@ -15,7 +15,7 @@
 
 /* Theme variables */
 @theme {
-  --font-myfont: "Dirtyline", cursive;
+  --font-myfont: "Dirtyline", sans-serif;
   --font-syne: "Syne", sans-serif;
 
   --color-light-bg: #ffffff;
