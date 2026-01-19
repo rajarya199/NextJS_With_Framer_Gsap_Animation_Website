@@ -95,25 +95,25 @@ export default function RecentWork() {
         {/* LEFT GROUP */}
         <div className="rw-left space-y-2 flex-1">
           {/* Title */}
-          <h2 className="text-[clamp(4rem,10vw,8rem)] leading-[0.9] font-[var(--font-myfont)] shrink-0">
+          <h2 className="text-[clamp(6rem,12vw,10rem)] leading-[0.9]  font-myfont font-bold shrink-0">
             <span
               ref={recentRef}
-              className="rw-title-recent block bg-[size:200%_100%] bg-right  bg-clip-text"
+              className="rw-title-recent block bg-size-[200%_100%] bg-right  bg-clip-text"
               style={{ backgroundImage: "linear-gradient(90deg,#111 50%,#aaa 0)" }}
             >
-              Recent
+              RECENT
             </span>
             <span
               ref={workRef}
-              className="rw-title-work block bg-[size:200%_100%] bg-right  bg-clip-text"
+              className="rw-title-work block bg-size-[200%_100%] bg-right  bg-clip-text"
               style={{ backgroundImage: "linear-gradient(90deg,#111 50%,#aaa 0)" }}
             >
-              Work
+              WORK
             </span>
           </h2>
 
           {/* Punchline */}
-          <div className="rw-punchline flex flex-col gap-2 text-xl font-[var(--font-syne)] text-zinc-800 dark:text-zinc-200">
+          <div className="rw-punchline flex flex-col gap-2 text-xl font-syne text-zinc-800 dark:text-zinc-200">
             <div className="rw-line overflow-hidden">In the creative wilderness,</div>
             <div className="rw-line overflow-hidden">clients find our work truly</div>
             <div className="rw-line overflow-hidden">beloved.</div>
