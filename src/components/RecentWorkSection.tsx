@@ -121,7 +121,7 @@ export default function RecentWork() {
         </div>
 
         {/* RIGHT BUTTON */}
-        <div className="rw-button hidden md:block">
+        <div className="rw-button hidden md:block ">
           <MagneticButton>Explore Work</MagneticButton>
         </div>
       </div>
